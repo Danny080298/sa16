@@ -1,2 +1,71 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="application.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Danny Nguyen</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="current"><a href="/about">About Me</a></li>
+                    <li><a href="/work">My Work</a></li>
+                    <li><a href="/contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2>About Me</h2>
+        <p>Ethics: Vietnamese</p>
+        <p>DOB: August 2nd, 1998</p>
+        <p>University of Memphis</p>
+        <p>Senior of Computer Science</p>
+
+        <button id="more-info-button">Show More</button>
+        <div id="more-info-content" style="display: none;">
+            <h3>My Hobbits</h3>
+            <ul>
+                <li>Playing video games</li>
+                <li>Doing housework</li>
+                <li>Exercising</li>
+                <li>Cooking</li>
+            </ul>
+            
+            <h3>Experience</h3>
+            <ul>
+                <li>Technician of Flectronics - 3 months</li>
+                <li>Sushi Chef of Benihana - 1 years and half</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Danny Nguyen. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var moreInfoButton = document.getElementById('more-info-button');
+    var infoContent = document.getElementById('more-info-content');
+
+    moreInfoButton.addEventListener('click', function() {
+      if(infoContent.style.display === 'none' || infoContent.style.display === '') {
+        infoContent.style.display = 'block';
+        moreInfoButton.textContent = 'Show Less';
+      } else {
+        infoContent.style.display = 'none';
+        moreInfoButton.textContent = 'Show More';
+      }
+    });
+});
+    </script>
+</body>
+</html>
