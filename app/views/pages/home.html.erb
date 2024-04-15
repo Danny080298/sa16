@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" type="text/css" href="styles/application.css">
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Welcome to my Portfolio</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/work">My Work</a></li>
+                    <li><a href="/contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home">
+    <div class="intro">
+        <h1>Hello, I'm Danny Nguyen</h1>
+        <p>Welcome to my professional space.</p>
+        <div class="summary">
+           <p>I am a full time student of University of Memphis</p>
+           <p>I am practicing to create a Portfolio for SA 16 assignment. In this page, I participate creating a welcoming introduction to explore myself.</p>
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="container">
+          
+            <p>&copy; 2024 Danny Nguyen. All rights reserved.</p>
+        </div>
+ </footer>
+</body>
+ 
+</html>
