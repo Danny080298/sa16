@@ -1,2 +1,69 @@
-<h1>Pages#work</h1>
-<p>Find me in app/views/pages/work.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %> 
+
+
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Danny Nguyen</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li class="current"><a href="/work">My Work</a></li>
+                    <li><a href="/contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2>My work</h2>
+        <p>This is my work-Experience</p>
+
+        <button id="more-info-button">Work</button>
+        <div id="more-info-content" style="display: none;">
+            <h3>Experience</h3>
+            <%= image_tag 'Flextronics.webp' %>            
+            <ul>
+                <li>Technician of Flectronics - 3 months</li>
+                <li>Repairing components of Latop units and installing systems</li>
+            </ul>
+            <%= image_tag 'benihana-chef.jpeg'%>  
+            <ul>
+                <li>Sushi Chef of Benihana - 1 years and half</li>
+                <li>Preparing and cooking meals and sushi</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Danny Nguyen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var moreInfoButton = document.getElementById('more-info-button');
+        var infoContent = document.getElementById('more-info-content');
+
+        moreInfoButton.addEventListener('click', function() {
+            if(infoContent.style.display === 'none' || infoContent.style.display === '') {
+                infoContent.style.display = 'block';
+                moreInfoButton.textContent = 'Show Less';
+            } else {
+                infoContent.style.display = 'none';
+                moreInfoButton.textContent = 'Show More';
+            }
+            });
+    });
+    </script>
+</body>
+</html>
